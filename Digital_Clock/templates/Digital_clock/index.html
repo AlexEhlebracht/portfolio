@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Digital Clock</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron">
+        <link rel="stylesheet" href="{% static 'Digital_Clock/styles.css' %}">
+    </head>
+    <body>
+        <div id="clock"></div>
+        <script>
+            setInterval(function() {
+                var currentTime = new Date();
+                var hours = currentTime.getHours();
+                var minutes = currentTime.getMinutes();
+                var seconds = currentTime.getSeconds();
+                var am_pm = "AM";
+                if (hours > 12) {
+                    hours = hours - 12;
+                    am_pm = "PM";
+                }
+                if (hours === 0) {
+                    hours = 12;
+                }
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                }
+                if (seconds < 10) {
+                    seconds = "0" + seconds;
+                }
+                var clockTime = hours + ":" + minutes + ":" + seconds + " " + am_pm;
+                document.getElementById("clock").innerHTML = clockTime;
+            }, 1000);
+        </script>
+    </body>
+</html>

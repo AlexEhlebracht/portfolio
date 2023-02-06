@@ -1,0 +1,30 @@
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace, Orbitron;
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(to bottom right, rgb(65, 114, 230), rgb(209, 73, 214));
+}
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-variant-numeric: tabular-nums
+}
+#clock {
+    background-color: rgb(0, 0, 0, 50%);
+    border-radius: 16px;
+    padding: 16px;
+    color: white;
+    box-shadow: -16px -16px 16px rgb(209, 73, 214), 16px 16px 16px rgb(65, 114, 230);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
